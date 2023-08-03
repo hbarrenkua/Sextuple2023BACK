@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="svg2" viewBox="0 0 220 250" width="220px" height="250" xmlns="http://www.w3.org/2000/svg">
+  <g id="g8" transform="matrix(1.333333, 0, 0, -1.333333, 5.087988, 1388.761963)">
+    <g id="g10" transform="scale(0.1)">
+      <path d="M 165.262 9045.691 L 45.663 9398.511 C 18.462 9478.761 61.462 9565.891 141.663 9593.111 L 141.663 9593.121 C 221.962 9620.331 309.063 9577.341 336.262 9497.071 L 453.962 9205.091" style="fill:none;stroke:#000018;stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" id="path212"/>
+      <path d="M 686.762 9418.171 L 686.762 10246.101 C 686.762 10310.381 738.863 10362.501 803.163 10362.501 C 867.462 10362.501 919.563 10310.381 919.563 10246.101 L 919.563 9504.411" style="fill:none;stroke:#000018;stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" id="path214"/>
+      <path d="M 453.962 9205.091 L 323.163 10124.471 C 315.962 10162.011 326.063 10201.731 353.063 10228.751 C 374.163 10249.821 403.262 10262.851 435.363 10262.851 C 496.962 10262.851 538.363 10213.681 551.563 10154.411 C 555.563 10136.321 686.762 9418.171 686.762 9418.171" style="fill:none;stroke:#000018;stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" id="path216"/>
+      <path d="M 1188.863 9456.241 L 1283.163 10124.471 C 1290.262 10162.011 1280.262 10201.731 1253.262 10228.751 C 1232.163 10249.821 1203.063 10262.851 1170.863 10262.851 C 1109.262 10262.851 1067.962 10213.681 1054.762 10154.411 C 1050.762 10136.321 919.563 9507.941 919.563 9507.941" style="fill:none;stroke:#000018;stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" id="path218"/>
+      <path d="M 1188.863 9456.241 C 1243.163 9623.251 1303.663 9808.981 1306.863 9818.541 C 1326.363 9876.041 1372.762 9920.441 1434.063 9913.771 C 1466.063 9910.291 1493.563 9894.181 1512.163 9870.961 C 1536.163 9841.171 1541.863 9800.601 1530.663 9764.061 L 1416.363 9397.551 C 1395.663 9331.361 1385.163 9262.411 1385.163 9193.091 L 1385.163 9193.081 C 1385.163 8862.181 1116.962 8593.931 786.063 8593.931 L 746.163 8593.931 C 466.163 8593.931 230.962 8786.051 165.262 9045.681" style="fill:none;stroke:#000018;stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" id="path220"/>
+    </g>
+  </g>
+</svg>
