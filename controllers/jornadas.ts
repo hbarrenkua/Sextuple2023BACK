@@ -236,7 +236,7 @@ FROM mangas m
  ORDER BY vc.jornada, vc.sesion, vc.tanda_orden, vc.orden_sup, orden_salida*/
 
  SELECT ROW_NUMBER() OVER (PARTITION BY   tipofm ORDER BY vc.tanda_orden, vc.orden_sup,orden_salida ) AS orden , 
- SUM(tiempo+ case when vc.x >1 then tiempoCA ELSE 0 end) ovER (PARTITION BY horario,  tipofm ORDER BY horario,  vc.tanda_orden, vc.orden_sup,orden_salida) AS duracion, 
+ SUM(tiempo+ case when vc.x >1 then tiempoCA ELSE 0 end) ovER (PARTITION BY horario,  tipofm , cast(replace(s.Nombre,'Ring ','') as INT)  ORDER BY horario,  vc.tanda_orden, vc.orden_sup,orden_salida) AS duracion, 
  vc.jornada, cast(replace(s.Nombre,'Ring ','') as INT) NumeroPista, 
  vc.sesion, fusionManga IdMangaFusionada, IdManga, vc.tipo, vc.grado, vc.descripcion, concat(coalesce(vc.prefijo,''), vc.categoria) altura, vc.idperro perroId, vc.IdGuia guiaId, vc.guia nombreGuia, vc.perro nombrePerro, vc.club, 
 
@@ -255,7 +255,7 @@ WHERE ch.Jornada=$id
  GROUP BY ch.Pista
 			 ) AS ayuda, pendiente
           FROM (SELECT m.jornada, sj.id IdSuperJornada, j.numero, t.sesion, t.orden tanda_orden, m.ID IdManga, m.Tipo,tim.tiempo tiempo,
-          ROW_NUMBER() OVER (PARTITION BY m.jornada, t.horario,m.tipo ORDER BY t.jornada, t.sesion, t.orden,case when m.tipo=6 THEN case p.categoria when 'X' THEN 5 when 'L' then 4 When 'M' then 3 when 'S' then 2 when 'T' THEN 1 ELSE 6 END
+          ROW_NUMBER() OVER (PARTITION BY m.jornada, t.horario,m.tipo,cast(replace(s.Nombre,'Ring ','') as INT)  ORDER BY t.jornada, t.sesion, t.orden,case when m.tipo=6 THEN case p.categoria when 'X' THEN 5 when 'L' then 4 When 'M' then 3 when 'S' then 2 when 'T' THEN 1 ELSE 6 END
                                      WHEN m.tipo=11 THEN case p.categoria when 'X' THEN 5 when 'L' then 4 When 'M' then 3 when 'S' then 2 when 'T' THEN 1 ELSE 6 END
                                                                                   WHEN m.tipo=5 THEN case p.categoria when 'X' THEN 2 when 'L' then 5 When 'M' then 4 when 'S' then 2 when 'T' THEN 1 ELSE 6 END
                                                                                   when m.tipo=10 then case p.categoria when 'X' THEN 5 when 'L' then 3 When 'M' then 2 when 'S' then 1 when 'T' THEN 4 ELSE 6 END
@@ -349,6 +349,8 @@ when t.tipo = '30' then '12'
 when t.tipo = '31' then '12'
 when t.tipo = '51' then '12'
 END =  m.tipo
+INNER JOIN sesiones s
+ON t.sesion = s.id
 ORDER BY t.jornada, t.sesion, t.orden,case when m.tipo=6 THEN case p.categoria when 'X' THEN 5 when 'L' then 4 When 'M' then 3 when 'S' then 2 when 'T' THEN 1 ELSE 6 END
                                      WHEN m.tipo=11 THEN case p.categoria when 'X' THEN 5 when 'L' then 4 When 'M' then 3 when 'S' then 2 when 'T' THEN 1 ELSE 6 END
                                                                                   WHEN m.tipo=5 THEN case p.categoria when 'X' THEN 2 when 'L' then 5 When 'M' then 4 when 'S' then 2 when 'T' THEN 1 ELSE 6 END
